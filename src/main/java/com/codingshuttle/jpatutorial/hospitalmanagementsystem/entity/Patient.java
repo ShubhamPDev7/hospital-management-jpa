@@ -36,7 +36,7 @@ public class Patient {
     @CreationTimestamp
     private LocalDate createdAt;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn
     private Insurance insurance; // Owning side
 
